@@ -29,22 +29,16 @@ enum tap_dance_declarations {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // See https://docs.qmk.fm/keycodes.html
 
-[0] = KEYMAP( /* Base */
-  TO(2),   KC_NO,   KC_NO,   KC_NO,   TO(1), \
-  KC_7,    KC_6,    KC_5,    KC_4,    KC_3,  \
-  KC_V,    KC_W,    KC_X,    KC_Y,    KC_Z   \
+[0] = KEYMAP( /* Base - DEBUG */
+  KC_ESCAPE, 	LGUI(KC_R), LGUI(KC_DOT), KC_NO,  TO(1),  \
+  KC_NO, 		KC_F15,     KC_F16,       KC_F17, KC_F18, \
+  KC_NO, 		KC_NO,      KC_NO,        KC_NO,  KC_NO   \
 ),
 
 [1] = KEYMAP( /* First Layer */
-  KC_NO, KC_NO, KC_NO,   KC_NO,   TO(0), \
-  KC_NO, KC_NO, KC_NO,   Z_NSLOG, KC_NO, \
-  KC_NO, KC_NO, Z_NSSTR, KC_NO,   KC_NO  \
-),
-
-[2] = KEYMAP( /* Second Layer - Debug */
-  TO(0), LGUI(KC_R), LGUI(KC_DOT), KC_NO,  KC_NO,  \
-  KC_NO, KC_F15,     KC_F16,       KC_F17, KC_F18, \
-  KC_NO, KC_NO,      KC_NO,        KC_NO,  KC_NO   \
+  KC_NO, KC_NO, KC_NO,   	KC_NO,   TO(0), \
+  KC_NO, KC_NO, Z_NSSTR, 	Z_NSLOG, KC_NO, \
+  KC_NO, KC_NO, KC_NO, 		KC_NO,   KC_NO  \
 ),
 
 };
